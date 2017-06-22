@@ -1,2 +1,1 @@
-# upperechelon
-Master repository for Upper Echelon Gamers website
+# Upper Echelon Gamers
