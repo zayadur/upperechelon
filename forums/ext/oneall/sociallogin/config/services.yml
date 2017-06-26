@@ -1,0 +1,17 @@
+services:
+    oneall.sociallogin.listener:
+        class: oneall\sociallogin\event\listener
+        arguments:
+            - @config
+            - @config_text
+            - @controller.helper
+            - @request
+            - @template
+            - @user
+            - %core.root_path%
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }
+
+imports:
+    - { resource: auth.yml }    
