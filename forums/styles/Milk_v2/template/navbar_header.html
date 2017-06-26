@@ -28,7 +28,7 @@
 		</li>
 
 		<!-- EVENT overall_header_navigation_prepend -->
-		<li>
+		<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF -->>
 			<a href="{U_INDEX}">
 				<i class="fa fa-comments fa-fw" aria-hidden="true"></i><span>Forums</span>
 			</a>
@@ -40,7 +40,7 @@
 				</a>
 			</li>
 		<!-- ENDIF -->
-		<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF -->>
+		<li>
 			<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
 				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span>
 			</a>
