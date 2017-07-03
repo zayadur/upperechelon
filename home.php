@@ -9,11 +9,13 @@ $user->session_begin();
 $auth->acl($user->data);
 $user->setup();
 
-page_header('Credits');
+page_header('About Us');
 
 $template->set_filenames(array(
-    'body' => 'credits_body.html',
+    'body' => 'home_body.html',
 ));
 
+make_jumpbox(append_sid("{$phpbb_root_path}viewforum.$phpEx"));
 page_footer();
+
 ?>
