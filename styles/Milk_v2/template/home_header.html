@@ -103,6 +103,8 @@ a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, 
 
 {$STYLESHEETS}
 
+    <link rel="stylesheet" href="https://s3.amazonaws.com/upperechelon.gg/css/home.css" />
+
 <!-- EVENT overall_header_stylesheets_after -->
 
 </head>
@@ -167,47 +169,5 @@ class="site_logo"></span></a>
             <!-- EVENT overall_header_navbar_before -->
       
         </div><!-- /#page-header -->
-        
-        <div id="inner-wrap">
-        
-       
-            <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
-                <!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
-                <!-- EVENT overall_header_breadcrumbs_before -->
-                <li class="breadcrumbs">
-                    <!-- IF U_SITE_HOME -->
-                        <span class="crumb" {$MICRODATA}>Browsing <a href="{U_SITE_HOME}" itemprop="url" data-navbar-reference="home"><span itemprop="title">{L_SITE_HOME}</span></a></span>
-                    <!-- ENDIF -->
-                    <!-- EVENT overall_header_breadcrumb_prepend -->
-                    <!-- BEGIN navlinks -->
-                        <!-- EVENT overall_header_navlink_prepend -->
-                        <span class="crumb" {$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}" itemprop="url"><span itemprop="title">{navlinks.FORUM_NAME}</span></a></span>
-                        <!-- EVENT overall_header_navlink_append -->
-                    <!-- END navlinks -->
-                    <!-- EVENT overall_header_breadcrumb_append -->
-                </li>
-                <!-- EVENT overall_header_breadcrumbs_after -->
-        
-                <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-                    <li class="rightside responsive-search">
-                        <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}" role="menuitem">
-                            <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
-                        </a>
-                    </li>
-                <!-- ENDIF -->
-            </ul>
-                
     
-        <!-- EVENT overall_header_page_body_before -->
-    
-        <a id="start_here" class="anchor"></a>
-        <div id="page-body" class="page-body" role="main">
-            <!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
-            <div id="information" class="rules">
-                <div class="inner">
-                    <strong>{L_INFORMATION}{L_COLON}</strong> {L_BOARD_DISABLED}
-                </div>
-            </div>
-            <!-- ENDIF -->
-    
-            <!-- EVENT overall_header_content_before -->
+        <!-- EVENT overall_header_content_before -->

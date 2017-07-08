@@ -9,13 +9,11 @@ $user->session_begin();
 $auth->acl($user->data);
 $user->setup();
 
-page_header('About Us');
+page_header('Home');
 
 $template->set_filenames(array(
     'body' => 'home_body.html',
 ));
 
-make_jumpbox(append_sid("{$phpbb_root_path}viewforum.$phpEx"));
 page_footer();
-
 ?>
