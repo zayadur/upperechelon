@@ -1,0 +1,148 @@
+@import "globals";
+
+.flex {
+	> dl {
+		position: relative;
+
+		> dt {
+			float: left;
+			clear: left;
+			width: 40%;
+			margin: 0 0 0.7em 0;
+
+			.sidebar & {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+
+		> dd {
+			float: left;
+			width: 58%;
+			margin: 0;
+			position: relative;
+
+			.sidebar & {
+				width: 100%;
+				padding-left: 0;
+			}
+		}
+	}
+
+	.sidebar & {
+		.resultbar {
+			width: 80%;
+			padding: 0;
+		}
+
+		.poll_option_percent {
+			position: absolute;
+			width: auto;
+			bottom: 0;
+			right: 0;
+			padding: 0;
+		}
+	}
+}
+
+/* blocks layout */
+.sm-block-spacing {
+	margin-bottom: $gutter-width;
+
+	.post & {
+		margin: 0.6em;
+	}
+}
+
+.sm-block-content {
+	display: block;
+	clear: both;
+	overflow: hidden;
+	word-wrap: break-word;
+
+	.info {
+		float: right;
+	}
+
+	li {
+		list-style-type: inherit;
+	}
+}
+
+.sm-block-container {
+	.postbody {
+		@extend .sm-postbody;
+
+		.codebox {
+			display: inline-block;
+			position: relative;
+			width: 99%;
+			margin: 10px 0;
+		}
+	}
+
+	.content {
+		overflow-x: hidden;
+	}
+
+	.header {
+		font-weight: bold;
+	}
+}
+
+.inner-spacing {
+	padding: 1em;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+/* Footer */
+.footer {
+	margin-left: 10px;
+	clear: both;
+
+	> .panel {
+		padding: 15px;
+	}
+
+	.block {
+		.panel {
+			background: transparent;
+		}
+	}
+
+	.sm-block-spacing {
+		border-right: 1px solid #ccc;
+
+		&:nth-child(3),
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	@media (max-width: 700px) {
+		margin-left: 0;
+	}
+}
+
+.grid {
+	.sidebar .block .no-wrap {
+		background: none;
+
+		.sm-block-header {
+			border: 0;
+		}
+	}
+
+	.grid__col--d-first {
+		padding-right: $toast-gutter-width / 2;
+
+		@media screen and (max-width : 940px) {
+			float: none;
+			padding-right: 0;
+			width: 100%;
+		}
+	}
+}

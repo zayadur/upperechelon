@@ -12,7 +12,7 @@ $user->setup();
 page_header('Credits');
 
 $template->set_filenames(array(
-    'body' => 'credits.html',
+    'body' => 'credits_body.html',
 ));
 
 page_footer();

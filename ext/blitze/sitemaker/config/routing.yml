@@ -1,0 +1,15 @@
+blitze_sitemaker_blocks_admin:
+    path: /blocks/{action}
+    defaults: { _controller: blitze.sitemaker.blocks.admin.controller:handle, _format: json }
+    requirements:
+        _format: json
+
+blitze_sitemaker_menus_admin:
+    path: /menu/admin/{action}
+    defaults: { _controller: blitze.sitemaker.menus.admin.controller:handle, action: '', _format: json }
+    requirements:
+        _format: json
+
+blitze_sitemaker_forum:
+    path: /forum
+    defaults: { _controller: blitze.sitemaker.forum.controller:handle }
