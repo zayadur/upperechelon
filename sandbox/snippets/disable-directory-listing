@@ -1,0 +1,16 @@
+
+<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
+
+to
+
+<Directory /var/www/>
+        Options FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
+
+in httpd.conf

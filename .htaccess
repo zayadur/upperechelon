@@ -1,2 +1,3 @@
+Options -Indexes
 DirectoryIndex splash.php
 RewriteEngine on
