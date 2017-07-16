@@ -1,0 +1,50 @@
+[
+    {
+        "name": "alaouy/youtube",
+        "version": "v1.2.3",
+        "version_normalized": "1.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/alaouy/Youtube.git",
+            "reference": "b15804932cbea794696f5da3a2a23dab089ab136"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/alaouy/Youtube/zipball/b15804932cbea794696f5da3a2a23dab089ab136",
+            "reference": "b15804932cbea794696f5da3a2a23dab089ab136",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "3.7.*@stable"
+        },
+        "time": "2017-02-10T20:48:51+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Alaouy\\Youtube\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mustapha Alaouy",
+                "email": "alaouym@gmail.com"
+            }
+        ],
+        "description": "Laravel PHP Facade/Wrapper for the Youtube Data API v3",
+        "keywords": [
+            "alaouy",
+            "api",
+            "laravel",
+            "video",
+            "youtube"
+        ]
+    }
+]

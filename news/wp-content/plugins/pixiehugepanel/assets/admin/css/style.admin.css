@@ -1,0 +1,891 @@
+/***
+* Style for Admin Panel
+***/
+*:focus{
+    outline: none;
+    box-shadow: none;
+}
+a.wp-menu-open{
+    background: #8144cf !important;
+}
+.clearfix::before,
+.clearfix::after {
+    clear: both;
+    display: block;
+    content: ' ';
+}
+/*** Header ***/
+header.admin-header{
+    background: url(../../admin/images/header.jpg) no-repeat top center;
+    height: 105px;
+}
+.sectionBox {
+    background-color: #8144cf;
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.admin-header > div{
+    width: 30%;
+    height: 100%;
+}
+.img-ach-inline {
+    position: relative;
+    top: 2px
+}
+textarea.medium-text {
+    max-width: 360px;
+}
+div.updated {
+    border-left-color: #8144CF !important;
+}
+.admin-header .logo-section{
+    float: left;
+}
+.admin-header .logo-section .logo-img{
+    margin: 29px 30px;
+}
+.admin-header .admin-infobar{
+    float: right;
+}
+.admin-header .admin-infobar .links{
+    height: 100%;
+    color: #fff;
+}
+.admin-header .admin-infobar .links a{
+    line-height: 105px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.admin-header .admin-infobar .links a.more-templates{
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    margin: 30px 0 30px 5px;
+    padding: 0 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #191e21;
+}
+.admin-header .admin-infobar .links .spliter{
+    font-size: 20px;
+}
+
+.backBtn {
+    float: right;
+}
+/*** Pick sections ***/
+.btn:hover {
+    color:#fff;
+}
+.btn {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: #fff;
+    transition: .3s all ease-in-out;
+    border: 0;
+    text-shadow: none;
+    width: 86px;
+    line-height: 32px;
+    height: 32px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+.btn.btn-default {
+    background: #8144cf;
+}
+.btn.btn-warning {
+    background: #191E21;
+}
+div.main-content{
+    background: #191e21;
+    float: left;
+    width: 100%;
+}
+section.sections-pick{
+    float: left;
+    width: 17%;
+    background: #191e21;
+    min-height: 100%;
+    bottom: 0;
+}
+.sections-pick .admin-pick-list{
+    list-style: none;
+    margin: 1px 0;
+} 
+.sections-pick .admin-pick{
+    float: left;
+    width: 100%;
+    clear: both;
+    margin: 0;
+    outline: none;
+}
+.sections-pick .admin-pick a{
+    display: block;
+    width: 100%;
+    padding: 0 30px;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+    background: #32373b;
+    height: 55px;
+    text-decoration: none;
+    line-height: 55px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    transition: .3s all ease-in-out;
+}
+.sections-pick .admin-pick a:focus{
+    outline: none !important;
+    box-shadow: none;
+}
+.sections-pick .admin-pick a i{
+    display: none;
+    line-height: 55px;
+    float: right;
+}
+.sections-pick .admin-pick.active a, .sections-pick .admin-pick a:hover{
+    background: #8144cf;
+}
+.sections-pick .admin-pick.active a i{
+    display: inline;
+}
+
+/*** Main elements ***/
+main.sections{
+    float: right;
+    width: 83%;
+    padding: 50px;
+    background: #fff;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+}
+main.sections .admin-section{
+    display: none;
+}
+main.sections .admin-section h2.top20 {
+    margin-top: 20px;
+}
+main.sections .admin-section h2,
+main.sections .admin-section form h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: left;
+    margin: 0 10px 0 0;
+    color: #000;
+    line-height: 1;
+}
+main.sections .admin-section .demolink,
+main.sections .admin-section form .demolink{
+    color: #576167;
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: bold;
+}
+main.sections .admin-section .demolink a,
+main.sections .admin-section form .demolink a{
+    color: #8144cf;
+    text-decoration: none;
+}
+main.sections .admin-section .demolink .spliter,
+main.sections .admin-section form .demolink .spliter{
+    font-size: 18px;
+    margin-right: 10px;
+    color: #000;
+}
+main.sections .admin-section .section-description,
+main.sections .admin-section form .section-description{
+    color: #32373b;
+    font-size: 12px;
+    padding: 20px 0;
+    clear: both;
+}
+main.sections .admin-section form .custom-table .demolink {
+    margin: 0;
+}
+main.sections .admin-section form .form-table tr{
+    border-bottom: 1px solid #e1e1e1;
+}
+main.sections .admin-section form .form-table tr th{
+    min-width: 300px;
+    color: #555759;
+    font-size: 16px;
+    font-weight: 700;
+    width: 40%;
+}
+main.sections .admin-section form .form-table tr td{
+    text-align: right;
+}
+main.sections .admin-section form .form-table tr td #wp-pixiehuge-footer-copyright-wrap,
+main.sections .admin-section form .form-table tr td #wp-pixiehuge-about-description-wrap {
+    float: right;
+}
+main.sections .admin-section form .form-table tr td .wp-editor-wrap {
+    max-width: 338px;
+}
+main.sections .admin-section form .form-table tr td textarea{
+    background: #d9d9d9;
+    color: #555759;
+    width: 100%;
+    height: 100px;
+    border: 0;
+    outline: 0;
+    border-radius: 3px; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px; 
+}
+main.sections .admin-section form .form-table tr td textarea.ie-setting{
+    height: 300px;
+    max-height: 300px;
+}
+main.sections .admin-section form .form-table tr td select,
+main.sections .admin-section form .form-table tr td input{
+    display: inline-block;
+    box-shadow: none;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background: #d9d9d9;
+    text-align: center;
+    color: #555759;
+    padding: 0 5px;
+    margin-right: 10px;
+    line-height: 30px;
+}
+main.sections .admin-section form .form-table tr td select,
+main.sections .admin-section form .form-table tr td input[type=number] {
+    width: 100%;
+}
+main.sections .admin-section form .form-table tr td input[type=url]{
+    width: 200px;
+}
+main.sections .admin-section form .form-table tr td input[type=button],
+main.sections .admin-section form .form-table tr td input[type=reset]{
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #8144cf;
+    margin-right: 10px;
+    height: 30px;
+    padding: 0 15px;
+   
+}
+main.sections .admin-section form .form-table tr td input[type=date]{
+    padding: 5px 0;
+    line-height: 20px;   
+}
+main.sections .admin-section form .form-table tr td input[type=range]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    background: transparent;
+    margin-top: 15px;
+}
+
+main.sections .admin-section form .form-table tr td input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    position: relative;
+    background: #e5e5e5;
+    border-radius: 1px;
+    box-shadow: none;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    display: block;
+    height: 11px;
+    width: 11px;
+    margin-top: -4px;
+    border-radius: 3px;
+    background: #8144cf;
+    cursor: pointer;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #e5e5e5;
+    border-radius: 1px;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-moz-range-thumb {
+    height: 11px;
+    width: 11px;
+    border-radius: 3px;
+    background: #8144cf;
+    cursor: pointer;
+    box-shadow: none;
+    border: 0;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-ms-fill-lower {
+    background: #e5e5e5;
+    box-shadow: 0;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-ms-fill-upper {
+    background: #e5e5e5;
+    box-shadow: 0;
+}
+main.sections .admin-section form .form-table tr td input[type=range]::-ms-thumb {
+    border: 0;
+    margin-top: 1px;
+    height: 11px;
+    width: 11px;
+    border-radius: 3px;
+    background: #8144cf;
+    cursor: pointer;
+}
+main.sections input[type="checkbox"]{
+    display: none !important;
+}
+.labelCheckbox{
+    display: inline-block;
+    margin: 0 10px;
+}
+.labelCheckbox span.check{
+    line-height: 28px;
+    border: 1px solid #8144cf;
+    display: inline-block;
+    width: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #8144cf;
+    font-size: 11px;
+    transition: .3s all ease-out;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
+    -khtml-user-select: none;    
+    -moz-user-select: none;      
+    -ms-user-select: none;       
+    user-select: none;           
+    cursor: pointer;                  
+}
+.labelCheckbox span.check.on{
+    border-right: none;
+    border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+}
+.labelCheckbox.checked span.check.on{
+    background: #8144cf;
+    color: #fff;
+}
+.labelCheckbox span.check.off{
+    border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    background: #8144cf;
+    color: #fff;
+}
+.labelCheckbox.checked span.check.off{
+    background: #fff;
+    color: #8144cf;
+}
+
+
+main.sections .admin-section form .form-table tr td .select-holder{
+    overflow: auto;
+    transition: .3s all ease-in-out;
+    border: 1px solid #8144cf !important;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-appearance: none; 
+    float: left;
+    margin-right: 40px;
+}
+main.sections .admin-section form .form-table tr td .select-holder select{
+    display: none;
+}
+main.sections .admin-section form .form-table tr td .select-holder .select-option{
+    float: left;
+    width: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    color: #8144cf;
+    font-size: 11px;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}
+main.sections .admin-section form .form-table tr td .select-holder .select-option.selected{
+    background: #8144cf;
+    color: #fff;
+}
+main.sections .admin-section form .form-table tr td span.vs{
+    color: #8144cf;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin: 0 10px 0 0;
+    font-weight: 700;
+}
+main.sections .admin-section form .form-table tr td p.description{
+    display: none;
+}
+main.sections .admin-section form .form-table tr td p.description, 
+main.sections .admin-section form .form-table tr th p.description{
+    float: none;
+    clear: both;
+    margin-top: 20px;
+    max-width: 600px;
+    background: #f6f6f6;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px;
+    color: #808284;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+main.sections .admin-section form .form-table tr td table{
+    float: right;
+    text-align: left;
+}
+main.sections .admin-section form .form-table tr td h3{
+    clear: both;
+    float: right;
+    margin-top: 50px;
+}
+main.sections .admin-section form .form-table tr td .innerTable tr td{
+    text-align: center;
+    padding: 5px;
+}
+main.sections .admin-section p.submit input[type=submit]{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background: #8144cf;
+    box-shadow: 0 8px 0 #6427B3 ;
+    -ms-box-shadow: 0 8px 0 #6427B3 ;
+    -moz-box-shadow: 0 8px 0 #6427B3 ;
+    color: #fff;
+    transition: .3s all ease-in-out;
+    border: 0;
+    text-shadow: none;
+    width: 135px;
+    line-height: 49px;
+    height: 45px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+main.sections .admin-section p.submit{
+    float: left;
+}
+main.sections .admin-section p.submit input[type=submit]:hover{
+    box-shadow: 0 6px 0 #6427B3 ;
+    -ms-box-shadow: 0 6px 0 #6427B3 ;
+    -moz-box-shadow: 0 6px 0 #6427B3 ;
+}
+main.sections .admin-section p.submit input[type=submit]:active{
+    box-shadow: 0 2px 0 #6427B3 ;
+    -ms-box-shadow: 0 2px 0 #6427B3 ;
+    -moz-box-shadow: 0 2px 0 #6427B3 ;
+}
+main.sections footer.text p.footer{
+    float: right;
+    line-height: 49px;
+    margin: 20px 0;
+    font-style: italic;
+}
+main.sections footer.text p.footer a{
+    color: #6427B3;
+    text-decoration: none;
+}
+
+/*** Main elements ***/
+.btn-holder{
+    float: right;
+    padding: 17px 0;
+}
+.url-field{
+    margin-left: 25px;
+}
+div.image-preview-holder{
+    float: right;
+    clear: both;
+    width: auto;
+    margin: 10px;
+}
+div.image-preview-holder.previewPhotos {
+    text-align: center;
+    clear:initial;
+    display: inline-block;
+    border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    margin:5px;    
+    position: relative;
+}
+div.image-preview-holder.previewPhotos div.img {
+    width:40px;
+    height:40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.removeUPPhoto {
+    font-size: 12px !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color:#fff;
+    cursor: pointer;
+}
+div.image-preview-holder.playerCover.team img,
+div.image-preview-holder.previewAvatar.team img {
+    max-width: 400px;
+    height: auto;
+}
+div.image-preview-holder.MatchBG img {
+    max-width: 300px;
+}
+div.image-preview-holder.previewLogoAway img,
+div.image-preview-holder.previewLogoHome img {
+    max-width: 64px;
+}
+div.image-preview-holder, section.image-preview-icon{
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+section.image-preview-icon{
+    margin: 0 10px;
+}
+.um-selector{
+    display: none;
+    float: right;
+}
+.um-selector.active{
+    display: block;
+}
+.um-selector input{
+    display: inline-block;
+}
+.image-preview-holder, .image-preview-icon{
+    float: none;
+}
+.image-preview-icon{
+    display: inline-block;
+}
+.image-preview-holder.favicon,
+.image-preview-holder.upcomingIcon{
+    margin: 0 10px;
+    display: inline-block;
+    clear: none;
+}
+.image-preview-holder.favicon img{
+    max-width: 16px;
+    height: auto;
+}
+.image-preview-holder.upcomingIcon img{
+    max-height: 40px;
+    width: auto;
+}
+.image-preview-icon .image-preview{
+    float: right;
+    max-height: 30px;
+    margin: 0 5px;
+    height: auto;
+}
+.image-preview-holder .image-preview{
+    margin: 10px;
+    max-width: 300px;
+    height: auto;
+}
+.pull-left {
+    float: left;
+}
+.alignleft {
+    text-align: left;
+}
+.image-preview-holder.favicon .image-preview{
+    margin: 7px 10px;
+}
+.width-max640 {
+    max-width: 640px;
+}
+.width-max320-img img,
+.width-max320 {
+    max-width: 320px;
+}
+.social-option{
+    float: right;
+    margin: 5px;
+}
+main.sections .admin-section form .form-table tr td input.social-option-field{
+    text-align: left;
+}
+span.or_item {
+    margin-top: 5px;
+    margin-right: 10px;
+    float: left;
+}
+.pixie-input {
+    float: left;
+    margin-right: 10px;
+}
+main.sections .admin-section form .settings-table tr td {
+    text-align: left;
+}
+main.sections .admin-section form td.td-align-left {
+    text-align: left !important;
+}
+main.sections .admin-section form .match-edit .image-preview-holder img {
+    max-width: 64px;
+}
+main.sections .admin-section form td.td-align-left select {
+    float: none;
+}
+.settings-table .pixie-input {
+    float: none;
+}
+.social-option-field{
+    float: left;
+    margin-right: 10px;
+}
+.social-option-description{
+    width: 130px;
+}
+.social-option-name,
+.social-option-description{
+    min-width: 50px;
+    line-height: 30px;
+    float: right;
+}
+/*** Font awesome ***/
+i.fa{
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+ul.fontawesome{
+    position: absolute;
+    margin: 0;
+}
+.fontawesome li{
+    background: #ccc;
+    padding: 3px;
+    text-align: left;
+    margin: 0;
+    display: none;
+    cursor: pointer;
+}
+.fontawesome li:hover{
+    background: #999;
+    transition: .2s all;
+    color: #000;
+}
+.fontawesome li.show{
+    display: block;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, 
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, 
+.xdsoft_datetimepicker .xdsoft_timepicker 
+.xdsoft_time_box>div>div.xdsoft_current {
+    background: #8144CF !important;
+    box-shadow: #8144CF 0 1px 3px 0 inset !important;
+    color: #fff;
+    font-weight: 700;
+}
+/* APCUSTOM */
+table.dataTable {
+    border-spacing: 0 10px !important;
+    border: 0;
+}
+table.dataTable.no-footer {
+    border: 0 !important; 
+}
+table.dataTable tbody th {
+    color: #c4c4c4;
+    font-weight: bold;
+    border: 0 !important;
+}
+table.dataTable thead {
+    border: 1px solid rgba(226,232,235,.6) !important;
+}
+table.dataTable thead th {
+    padding: 17px 18px !important;
+    border: 1px solid rgba(226,232,235,.6) !important;
+}
+table.dataTable tbody td {
+    line-height: 50px;
+}
+table.dataTable tbody td:not(:first-child),
+table.dataTable tbody td:not(:last-child) {
+    border-top: 1px solid rgba(226,232,235,.6) !important;
+    border-bottom: 1px solid rgba(226,232,235,.6) !important;
+}
+table.dataTable tbody td:first-child {
+    border-top: 1px solid rgba(226,232,235,.6) !important;
+    border-bottom: 1px solid rgba(226,232,235,.6) !important;
+    border-left: 1px solid rgba(226,232,235,.6) !important;
+}
+table.dataTable tbody td:last-child {
+    border-top: 1px solid rgba(226,232,235,.6) !important;
+    border-bottom: 1px solid rgba(226,232,235,.6) !important;
+    border-right: 1px solid rgba(226,232,235,.6) !important;
+}
+table.dataTable tbody td a {
+    color: #000;
+    font-weight: bold;
+    outline: 0;
+}
+table.dataTable tbody td a:focus {
+    outline: 0;
+}
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #000;
+    font-weight: bold;
+}
+a.paginate_button.previous {
+    border: 1px solid #000 !important;
+    margin-right: 10px;
+    color: #000 !important;
+    font-weight: bold
+}
+a.paginate_button.previous.disabled {
+    opacity: .7
+}
+a.paginate_button.next {
+    border: 1px solid #000 !important;
+    margin-left: 10px !important;
+    color: #000 !important;
+    font-weight: bold
+}
+a.paginate_button.next.disabled {
+    opacity: .7
+}
+a.paginate_button.previous:hover,
+a.paginate_button.next:hover {
+    background-color: #444444 !important;
+    color:#fff !important;
+}
+.bg_img_holder {
+    background-color: #8144CF;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center center;
+}
+/* BG IMG */
+.bg_img_holder.nobg {
+    background-color: transparent;
+}
+.bg_img_holder.gray {
+    background-color: #32373B;
+}
+.bg_img_holder img { 
+    height:100%;
+    width:auto;
+}
+a.btn.hfbtn,
+a.btn.pixieBtn,
+a.btn.partner { 
+    color:#fff;
+}
+.btn.partner { 
+    background-color:#FF0202;
+}
+.btn.pixieBtn {
+    cursor: default;
+    background-color:#8144CF;
+}
+.btn.hitbox {
+    cursor: default;
+    background-color:#99CC00;
+}
+.btn.azubu {
+    cursor: default;
+    background-color:#00ABE8;
+}
+.btn.twitch {
+    cursor: default;
+    background-color:#6441A4;
+}
+.btn.youtube {
+    cursor: default;
+    background-color:#e52d27;
+}
+.btn.mixer {
+    cursor: default;
+    background-color:#e52d27;
+}
+.ui-state-highlight {
+    width: 100% !important;
+    background-color:#8144CF !important;
+    border:5px dashed #000 !important;
+}
+.fa.fa-discord {
+    background-image: url('../images/discord.svg');
+    height: 18px;
+    width: 18px;
+    position:relative;
+    top:6px;
+    background-size: cover;
+    display:inline-block;
+}
+main.sections .admin-section form h2.noFloat {
+    float: none;
+}
+ul.sectionTable {
+    width: 50%;
+    float: right;
+}
+p.gray-description {
+    float: none;
+    clear: both;
+    margin-top: 10px;
+    max-width: 600px;
+    background: #f6f6f6;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px;
+    color: #808284;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}

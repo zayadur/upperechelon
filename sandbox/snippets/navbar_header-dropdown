@@ -1,0 +1,31 @@
+<li id="quick-links" class="quick-links dropdown-container responsive-menu<!-- IF not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH --> hidden<!-- ENDIF -->" data-skip-responsive="true">
+    <a href="#" class="dropdown-trigger">
+        <i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>LFG</span>
+    </a>
+    <div class="dropdown">
+        <div class="pointer"><div class="pointer-inner"></div></div>
+        <ul class="dropdown-contents" role="menu">
+            <!-- EVENT navbar_header_quick_links_before -->
+
+            <li class="separator"></li>
+            <li>
+                <a href="https://upperechelon.gg/viewforum.php?f=15" role="menuitem">
+                    <i class="icon fa-keyboard-o fa-fw" aria-hidden="true"></i><span>PC</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://upperechelon.gg/viewforum.php?f=17" role="menuitem">
+                    <i class="icon fa-gamepad fa-fw" aria-hidden="true"></i><span>PS4</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://upperechelon.gg/viewforum.php?f=18" role="menuitem">
+                    <i class="icon fa-gamepad fa-fw" aria-hidden="true"></i><span>XB1</span>
+                </a>
+            </li>
+            <li class="separator"></li>
+
+            <!-- EVENT navbar_header_quick_links_after -->
+        </ul>
+    </div>
+</li>
