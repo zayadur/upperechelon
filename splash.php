@@ -20,7 +20,7 @@
         <meta name="msapplication-config" content="https://s3.amazonaws.com/upperechelon.gg/img/icons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-        <title>Upper Echelon Gamers</title>
+        <title>Upper Echelon</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -53,6 +53,7 @@
 							-->
 						</div>
                         <div class="inner">
+							<a href="https://discord.gg/QPkNUKw" class="btn btn-discord btn-transparent" target="_blank"><img src="https://s3.amazonaws.com/upperechelon.gg/img/discord/logo-white.svg" height="29" width="27" /></a>
                             <a href="https://www.facebook.com/groups/UpperEchelonGamers/" class="btn btn-primary btn-transparent" target="_blank">&nbsp;<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>&nbsp;</a>
                             <a href="https://www.twitter.com/UE_UpperEchelon" class="btn btn-info btn-transparent" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
                             <a href="https://www.twitch.tv/upperechelongamers" class="btn btn-twitch btn-transparent" target="_blank"><i class="fa fa-twitch fa-2x" aria-hidden="true"></i></a>
