@@ -2,7 +2,23 @@
 	<div class="inner">
 
 	<ul id="nav-main" class="nav-main linklist" role="menubar">
+        <li id="quick-links" class="quick-links dropdown-container responsive-menu<!-- IF not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH --> hidden<!-- ENDIF -->" data-skip-responsive="true">
+            <a href="#" class="dropdown-trigger">
+                <i class="icon fa-bars fa-fw" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown">
+                <div class="pointer"><div class="pointer-inner"></div></div>
+                <ul class="dropdown-contents" role="menu">
+                    <!-- EVENT navbar_header_quick_links_before -->
 
+                    <li class="separator"></li>
+
+                    <li class="separator"></li>
+
+                    <!-- EVENT navbar_header_quick_links_after -->
+                </ul>
+            </div>
+        </li>
 		<!-- EVENT overall_header_navigation_prepend -->
         <li data-skip-responsive="true">
             <a href="https://upperechelon.gg" data-skip-responsive="true">
@@ -105,7 +121,7 @@
         </li>
 		<!-- EVENT navbar_header_user_profile_append -->
 	<!-- ELSE -->
-		<li class="rightside">
+		<li class="rightside" data-skip-responsive="true">
 			<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
 				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span>
 			</a>
