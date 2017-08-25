@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}">
 <head>
 <meta charset="utf-8" />
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {META}
@@ -20,6 +21,10 @@
 
 <!-- IF U_CANONICAL -->
 	<link rel="canonical" href="{U_CANONICAL}">
+<!-- ENDIF -->
+
+<!-- IF FORUM_FAVICON -->
+	<link rel="icon" href="{FORUM_FAVICON}" />
 <!-- ENDIF -->
 
 <!--
@@ -44,7 +49,34 @@
 </script>
 <!-- ENDIF -->
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+<!-- IF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Roboto Slab' -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <style type="text/css">body {font-family: "Roboto Slab", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Bubbler One' -->
+	<link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+    <style type="text/css">body {font-family: "Bubbler One", Arial, Helvetica, sans-serif; font-size: 18px;}</style> 
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Dosis' -->
+	<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Dosis", Arial, Helvetica, sans-serif; font-size: 16px;}</style>
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Exo 2' -->
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500" rel="stylesheet">
+	<style type="text/css">body {font-family: "Exo 2", Arial, Helvetica, sans-serif; font-size: 15px;}</style>             
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Raleway' -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Raleway", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Rubik' -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Rubik", Arial, Helvetica, sans-serif; font-size: 14px;}</style>   
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Quicksand' -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Quicksand", Arial, Helvetica, sans-serif; font-size: 14px;}</style>    
+<!-- ELSE -->    
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Roboto", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+<!-- ENDIF -->
+
+
 <link href="{T_FONT_AWESOME_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
 <!-- IF STYLE_SETTINGS_CONFIG_BASE_COLOUR == 'Dark' -->
@@ -58,13 +90,13 @@
 			/* Color */
 a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, .icon.fa-file.icon-red, a:hover .icon.fa-file.icon-red, .navigation .active-subsection a, .navigation .active-subsection a:hover, .navigation a:hover, .tabs .tab > a:hover, .tabs .activetab > a, .tabs .activetab > a:hover, a.postlink, a.postlink:visited, .navbar_in_header .badge, .button:focus .icon, .button:hover .icon, .dark_base .social_links_footer a span, .dark_base h2, .dark_base h2 a, .dark_base a:link, .dark_base a:visited, .button-secondary:focus, .button-secondary:hover, .notification_unread {color: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* Background Solid  */
-			.pagination li a:hover, .pagination li.active span, .pagination li a:focus, .jumpbox-cat-link, .dropdown-contents > li > a:hover, a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover, a.no_avatar:hover, .jumpbox-cat-link:hover, input.button1:focus, input.button2:focus, input.button3:focus, .specialbutton, input.specialbutton, .panel .specialbutton, a.specialbutton, .scrollToTop, a.specialbutton, .dark_base .social_links_footer a:hover span, .topic_type {background: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
+			.pagination li a:hover, .pagination li.active span, .pagination li a:focus, .jumpbox-cat-link, .dropdown-contents > li > a:hover, a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover, a.no_avatar:hover, .jumpbox-cat-link:hover, input.button1:focus, input.button2:focus, input.button3:focus, .specialbutton, input.specialbutton, .panel .specialbutton, a.specialbutton, .scrollToTop, a.specialbutton, .dark_base .social_links_footer a:hover span, .topic_type, .grid_unread {background: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* Borders Dark */
 			.pagination li a:hover, .pagination li.active span, .pagination li a:focus, blockquote, .codebox code, .jumpbox-cat-link, a.postlink, input.button1:focus, input.button2:focus, input.button3:focus, input.specialbutton, .inputbox:hover, .inputbox:focus, .specialbutton, a.specialbutton, .button:hover, .button:focus, .dark_base .social_links_footer a span, a.specialbutton, .dark_base .social_links_footer a:hover span {border-color: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* Background Gradient  */
 			.headerbar, body.content_block_header_block li.header, body.content_block_header_stripe li.header:before, .scrollToTop, .no_avatar, .social_links_footer, .badge, thead tr, .sidebar_block_stripe:before, .fancy_panel:before {background: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* The same as above, just with some opacity */
-			.headerbar_overlay_active {background-color: rgba(0,0,0,0.3);}			
+			.headerbar_overlay_active, .grid_colour_overlay:hover {background-color: rgba(0,0,0,0.3);}			
 			/* Colour Hover Light */
 			.navbar_footer a:hover, .copyright_bar a:hover, a.postlink:hover, .dark_base h2 a:hover  {opacity: 0.7;}			
 			/* Background Hover Light */
@@ -97,8 +129,6 @@ a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, 
 	<link href="{T_THEME_PATH}/tweaks.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <![endif]-->
 
-    <link rel="icon" href="https://s3.amazonaws.com/upperechelon.gg/img/icons/favicon.ico">
-
 <!-- EVENT overall_header_head_append -->
 
 {$STYLESHEETS}
@@ -106,7 +136,7 @@ a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, 
 <!-- EVENT overall_header_stylesheets_after -->
 
 </head>
-<body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}<!-- IF STYLE_SETTINGS_CONFIG_SIDEBARS and STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Right Only' --> sidebar-right-only<!-- ELSEIF STYLE_SETTINGS_CONFIG_SIDEBARS and STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Left Only' --> sidebar-left-only<!-- ELSEIF STYLE_SETTINGS_CONFIG_SIDEBARS --> sidebar-both<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_LAYOUT_TYPE --> body-layout-{STYLE_SETTINGS_CONFIG_LAYOUT_TYPE}<!-- ENDIF --> content_block_header_<!-- IF STYLE_SETTINGS_CONFIG_CONTENT_BLOCK_HEADER == 'Stripe' -->stripe<!-- ELSE -->block<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_HIGH_CONTRAST_LINKS --> high_contrast_links<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_BASE_COLOUR == 'Dark' --> dark_base<!-- ENDIF -->">
+<body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}<!-- IF STYLE_SETTINGS_CONFIG_SIDEBARS and STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Right Only' --> sidebar-right-only<!-- ELSEIF STYLE_SETTINGS_CONFIG_SIDEBARS and STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Left Only' --> sidebar-left-only<!-- ELSEIF STYLE_SETTINGS_CONFIG_SIDEBARS --> sidebar-both<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_LAYOUT_TYPE --> body-layout-{STYLE_SETTINGS_CONFIG_LAYOUT_TYPE}<!-- ENDIF --> content_block_header_<!-- IF STYLE_SETTINGS_CONFIG_CONTENT_BLOCK_HEADER == 'Stripe' -->stripe<!-- ELSE -->block<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_HIGH_CONTRAST_LINKS --> high_contrast_links<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_BASE_COLOUR == 'Dark' --> dark_base<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_NAVBAR_POSITION == 'Inside Header' --> navbar_i_header<!-- ELSE --> navbar_o_header<!-- ENDIF --><!-- IF STYLE_SETTINGS_CONFIG_ROUNDED_AVATARS --> force_rounded_avatars<!-- ENDIF -->">
 
 <!-- EVENT overall_header_body_before -->
     <div id="wrap" class="wrap">
@@ -138,10 +168,8 @@ a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, 
 class="site_logo"></span></a>
 								<!-- ENDIF -->
                             <!-- ELSEIF STYLE_SETTINGS_CONFIG_HEADER_FORMAT == 'Sitename and Description Only' -->
-                                <!-- 
                                 <h1>{SITENAME}</h1>
                                 <p>{SITE_DESCRIPTION}</p>
-                                -->
                             <!-- ELSE -->
                                 <!-- IF FORUM_LOGO -->
                                 	<a href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->">{FORUM_LOGO}</a>
@@ -175,8 +203,11 @@ class="site_logo"></span></a>
                 <!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
                 <!-- EVENT overall_header_breadcrumbs_before -->
                 <li class="breadcrumbs">
+                    <!-- IF U_SITE_HOME -->
+                        <span class="crumb" {$MICRODATA}><a href="{U_SITE_HOME}" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">{L_SITE_HOME}</span></a></span>
+                    <!-- ENDIF -->
                     <!-- EVENT overall_header_breadcrumb_prepend -->
-                        <span class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">{L_INDEX}</span></a></span>
+                        <span class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemprop="url" accesskey="h" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw"></i><!-- ENDIF --><span itemprop="title">{L_INDEX}</span></a></span>
         
                     <!-- BEGIN navlinks -->
                         <!-- EVENT overall_header_navlink_prepend -->

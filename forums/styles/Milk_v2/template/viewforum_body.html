@@ -26,7 +26,11 @@
 <!-- ENDIF -->
 
 <!-- IF S_HAS_SUBFORUM -->
-	<!-- INCLUDE forumlist_body.html -->
+    <!-- IF STYLE_SETTINGS_CONFIG_FORUMLIST_DISPLAY == 'Grid' -->
+        <!-- INCLUDE forumlist_grid.html -->
+    <!-- ELSE -->
+        <!-- INCLUDE forumlist_body.html -->
+    <!-- ENDIF -->
 <!-- ENDIF -->
 
 <!-- IF S_DISPLAY_POST_INFO or .pagination or TOTAL_POSTS or TOTAL_TOPICS -->
@@ -163,21 +167,20 @@
                         
 						<!-- IF topicrow.TOPIC_TYPE -->
                         	<span class="topic_type<!-- IF topicrow.S_POST_STICKY --> topic_type_sticky<!-- ELSEIF topicrow.S_POST_ANNOUNCE || topicrow.S_POST_GLOBAL --> topic_type_announce<!-- ELSEIF topicrow.S_HAS_POLL --> topic_type_poll<!-- ELSEIF topicrow.S_TOPIC_LOCKED --> topic_type_locked<!-- ENDIF -->">
-                            	<i class="icon fa-<!-- IF topicrow.S_POST_STICKY -->thumb-tack<!-- ELSEIF topicrow.S_POST_ANNOUNCE || topicrow.S_POST_GLOBAL -->bullhorn<!-- ELSEIF topicrow.S_HAS_POLL -->bar-chart<!-- ELSEIF topicrow.S_TOPIC_LOCKED -->lock<!-- ENDIF --> fa-fw"></i>
-                            	<span class="responsive-hide">{topicrow.TOPIC_TYPE}</span>
+                            	<i class="icon fa-<!-- IF topicrow.S_POST_STICKY -->thumb-tack<!-- ELSEIF topicrow.S_POST_ANNOUNCE || topicrow.S_POST_GLOBAL -->bullhorn<!-- ELSEIF topicrow.S_HAS_POLL -->bar-chart<!-- ELSEIF topicrow.S_TOPIC_LOCKED -->lock<!-- ENDIF --> fa-fw"></i>                            	
                             </span>
                         <!-- ENDIF -->
 						<!-- IF topicrow.S_TOPIC_DELETED -->
                         	<span class="topic_type topic_type_deleted">
                                 <a href="{topicrow.U_MCP_QUEUE}" title="{L_TOPIC_DELETED}">
-                                    <i class="icon fa-trash fa-fw" aria-hidden="true"></i><span class="responsive-hide">{L_DELETED}</span>
+                                    <i class="icon fa-trash fa-fw" aria-hidden="true"></i>
                                 </a>
                             </span>
 						<!-- ENDIF -->
 						<!-- IF topicrow.S_TOPIC_REPORTED -->
                         	<span class="topic_type topic_type_reported">
                                 <a href="{topicrow.U_MCP_REPORT}" title="{L_TOPIC_REPORTED}">
-                                    <i class="icon fa-exclamation-triangle fa-fw" aria-hidden="true"></i><span class="responsive-hide">{L_REPORTED}</span>
+                                    <i class="icon fa-exclamation-triangle fa-fw" aria-hidden="true"></i>
                                 </a>
                             </span>
 						<!-- ENDIF -->
@@ -190,7 +193,7 @@
 						<!-- ENDIF -->                                                                      
 						<!-- IF topicrow.S_UNREAD_TOPIC and not S_IS_BOT -->
 							<a class="unread" href="{topicrow.U_NEWEST_POST}">
-								<i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{NEW_POST}</span>
+								<i class="icon fa-circle fa-fw icon-red icon-md" aria-hidden="true"></i>
 							</a>
 						<!-- ENDIF -->
                         
@@ -205,7 +208,9 @@
 							{L_LAST_POST} {L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL} &laquo; <a href="{topicrow.U_LAST_POST}" title="{L_GOTO_LAST_POST}">{topicrow.LAST_POST_TIME}</a>
 							<!-- IF topicrow.S_POST_GLOBAL and FORUM_ID != topicrow.FORUM_ID --><br />{L_POSTED} {L_IN} <a href="{topicrow.U_VIEW_FORUM}">{topicrow.FORUM_NAME}</a><!-- ENDIF -->
 						</div>
-						<!-- IF topicrow.REPLIES --><span class="responsive-show left-box" style="display: none;">{L_REPLIES}{L_COLON} <strong>{topicrow.REPLIES}</strong></span><!-- ENDIF -->
+						<!-- IF topicrow.REPLIES -->
+							<span class="responsive-show" style="display: none;">{L_REPLIES}{L_COLON} <strong>{topicrow.REPLIES}</strong></span>
+							<!-- ENDIF -->
 						<!-- ENDIF -->
 
 						<div class="topic-poster responsive-hide">
@@ -339,10 +344,10 @@
             <!-- ENDIF -->            
             <ul class="topiclist forums">        
         
-            <!-- IF S_DISPLAY_ONLINE_LIST -->
+            <!-- IF S_DISPLAY_ONLINE_LIST and U_VIEWONLINE -->
                 <li class="row">
                     <div class="stat-block online-list">
-                        <h3><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h3>
+                        <h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3>
                         <p>{LOGGED_IN_USER_LIST}</p>
                     </div>
                 </li>

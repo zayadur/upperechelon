@@ -22,11 +22,13 @@
 	<link rel="canonical" href="{U_CANONICAL}">
 <!-- ENDIF -->
 
+<!-- IF FORUM_FAVICON -->
+	<link rel="icon" href="{FORUM_FAVICON}" />
+<!-- ENDIF -->
+
 <!--
-	phpBB style name: Merlin
-	Based on style:   prosilver (this is the default phpBB3 style)
-	Original author:  Tom Beddard ( http://www.subBlue.com/ )
-	Modified by: PlanetStyles ( http://www.planetstyles.net/ )
+	phpBB style name: Milk v2
+	Based on style:   Merlin Framework (http://www.planetstyles.net)
 -->
 
 <!-- IF S_ALLOW_CDN -->
@@ -45,7 +47,32 @@
 	})(document);
 </script>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<!-- IF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Roboto Slab' -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <style type="text/css">body {font-family: "Roboto Slab", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Bubbler One' -->
+	<link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+    <style type="text/css">body {font-family: "Bubbler One", Arial, Helvetica, sans-serif; font-size: 18px;}</style> 
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Dosis' -->
+	<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Dosis", Arial, Helvetica, sans-serif; font-size: 16px;}</style>
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Exo 2' -->
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400,500" rel="stylesheet">
+	<style type="text/css">body {font-family: "Exo 2", Arial, Helvetica, sans-serif; font-size: 15px;}</style>             
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Raleway' -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Raleway", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Rubik' -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Rubik", Arial, Helvetica, sans-serif; font-size: 14px;}</style>   
+<!-- ELSEIF STYLE_SETTINGS_CONFIG_FONT_FAMILY == 'Quicksand' -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Quicksand", Arial, Helvetica, sans-serif; font-size: 14px;}</style>    
+<!-- ELSE -->    
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <style type="text/css">body {font-family: "Roboto", Arial, Helvetica, sans-serif; font-size: 14px;}</style>
+<!-- ENDIF -->
+
 <!-- ENDIF -->
 <link href="{T_FONT_AWESOME_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
@@ -61,13 +88,13 @@
 			/* Color */
 a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, .icon.fa-file.icon-red, a:hover .icon.fa-file.icon-red, .navigation .active-subsection a, .navigation .active-subsection a:hover, .navigation a:hover, .tabs .tab > a:hover, .tabs .activetab > a, .tabs .activetab > a:hover, a.postlink, a.postlink:visited, .navbar_in_header .badge, .button:focus .icon, .button:hover .icon, .dark_base .social_links_footer a span, .dark_base h2, .dark_base h2 a, .dark_base a:link, .dark_base a:visited, .button-secondary:focus, .button-secondary:hover, .notification_unread {color: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* Background Solid  */
-			.pagination li a:hover, .pagination li.active span, .pagination li a:focus, .jumpbox-cat-link, .dropdown-contents > li > a:hover, a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover, a.no_avatar:hover, .jumpbox-cat-link:hover, input.button1:focus, input.button2:focus, input.button3:focus, .specialbutton, input.specialbutton, .panel .specialbutton, a.specialbutton, .scrollToTop, a.specialbutton, .dark_base .social_links_footer a:hover span, .topic_type {background: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
+			.pagination li a:hover, .pagination li.active span, .pagination li a:focus, .jumpbox-cat-link, .dropdown-contents > li > a:hover, a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover, a.no_avatar:hover, .jumpbox-cat-link:hover, input.button1:focus, input.button2:focus, input.button3:focus, .specialbutton, input.specialbutton, .panel .specialbutton, a.specialbutton, .scrollToTop, a.specialbutton, .dark_base .social_links_footer a:hover span, .topic_type, .grid_unread {background: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* Borders Dark */
 			.pagination li a:hover, .pagination li.active span, .pagination li a:focus, blockquote, .codebox code, .jumpbox-cat-link, a.postlink, input.button1:focus, input.button2:focus, input.button3:focus, input.specialbutton, .inputbox:hover, .inputbox:focus, .specialbutton, a.specialbutton, .button:hover, .button:focus, .dark_base .social_links_footer a span, a.specialbutton, .dark_base .social_links_footer a:hover span {border-color: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* Background Gradient  */
 			.headerbar, body.content_block_header_block li.header, body.content_block_header_stripe li.header:before, .scrollToTop, .no_avatar, .social_links_footer, .badge, thead tr, .sidebar_block_stripe:before, .fancy_panel:before {background: #{STYLE_SETTINGS_CONFIG_COLOUR_PICKER};}
 			/* The same as above, just with some opacity */
-			.headerbar_overlay_active {background-color: rgba(0,0,0,0.3);}			
+			.headerbar_overlay_active, .grid_colour_overlay:hover {background-color: rgba(0,0,0,0.3);}			
 			/* Colour Hover Light */
 			.navbar_footer a:hover, .copyright_bar a:hover, a.postlink:hover, .dark_base h2 a:hover  {opacity: 0.7;}			
 			/* Background Hover Light */

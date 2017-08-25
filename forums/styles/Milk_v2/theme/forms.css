@@ -297,6 +297,7 @@ input.inputbox	{
 input.medium	{ width: 50%; }
 input.narrow	{ width: 25%; }
 input.tiny	{ width: 150px; }
+input.sidebar_search { width: 225px; }
 
 textarea.inputbox {
 	width: 85%;
@@ -307,7 +308,7 @@ textarea.inputbox {
 }
 
 input[type="number"] {
-	-moz-padding-end: inherit;
+	-moz-padding-end: 0;
 }
 
 input[type="search"] {
@@ -379,7 +380,8 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	background-image: none;
 	border-right-width: 0;
 	float: left;
-	padding: 7px;
+	padding: 0 8px;
+	height: 37px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -395,7 +397,6 @@ input.button1:focus, input.button2:focus, input.button3:focus {
 	float: right;
 	margin-right: 5px;
 	margin-top: 50px;
-	
 }
 
 .search-header .inputbox {

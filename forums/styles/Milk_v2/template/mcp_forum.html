@@ -44,40 +44,7 @@
                     
 					<!-- IF topicrow.S_SELECT_TOPIC --><a href="{topicrow.U_SELECT_TOPIC}" class="topictitle">[ {L_SELECT_MERGE} ]</a>&nbsp;&nbsp; <!-- ENDIF -->
                     
-						<!-- IF topicrow.TOPIC_TYPE -->
-                        	<span class="topic_type<!-- IF topicrow.S_POST_STICKY --> topic_type_sticky<!-- ELSEIF topicrow.S_POST_ANNOUNCE || topicrow.S_POST_GLOBAL --> topic_type_announce<!-- ELSEIF topicrow.S_HAS_POLL --> topic_type_poll<!-- ELSEIF topicrow.S_TOPIC_LOCKED --> topic_type_locked<!-- ENDIF -->">
-                            	<i class="icon fa-<!-- IF topicrow.S_POST_STICKY -->thumb-tack<!-- ELSEIF topicrow.S_POST_ANNOUNCE || topicrow.S_POST_GLOBAL -->bullhorn<!-- ELSEIF topicrow.S_HAS_POLL -->bar-chart<!-- ELSEIF topicrow.S_TOPIC_LOCKED -->lock<!-- ENDIF --> fa-fw"></i>
-                            	<span class="responsive-hide">{topicrow.TOPIC_TYPE}</span>
-                            </span>
-                        <!-- ENDIF -->
-                        
-                        
-						<!-- IF topicrow.S_TOPIC_DELETED -->
-                        	<span class="topic_type topic_type_deleted">
-                                <a href="{topicrow.U_MCP_QUEUE}" title="{L_TOPIC_DELETED}">
-                                    <i class="icon fa-trash fa-fw" aria-hidden="true"></i><span class="responsive-hide">{L_DELETED}</span>
-                                </a>
-                            </span>
-						<!-- ENDIF -->
-						<!-- IF topicrow.S_TOPIC_REPORTED -->
-                        	<span class="topic_type topic_type_reported">
-                                <a href="{topicrow.U_MCP_REPORT}" title="{L_TOPIC_REPORTED}">
-                                    <i class="icon fa-exclamation-triangle fa-fw" aria-hidden="true"></i><span class="responsive-hide">{L_REPORTED}</span>
-                                </a>
-                            </span>
-						<!-- ENDIF -->
-						<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED -->
-                        	<span class="topic_type topic_type_unapproved tooltip" title="{L_TOPIC_UNAPPROVED}">
-                                <a href="{topicrow.U_MCP_QUEUE}" title="{L_TOPIC_UNAPPROVED}">
-                                    <i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span><!-- {L_TOPIC_UNAPPROVED} --></span>
-                                </a>
-                            </span>
-						<!-- ENDIF -->                                                                      
-						<!-- IF topicrow.S_UNREAD_TOPIC and not S_IS_BOT -->
-							<a class="unread" href="{topicrow.U_NEWEST_POST}">
-								<i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{NEW_POST}</span>
-							</a>
-						<!-- ENDIF -->                    
+						                    
                     
                     
                     

@@ -1,5 +1,7 @@
 @media (max-width: 767px) {
 	
+	body{ border-top-color: #FF0000;}
+	
 	/* Sidebar Adjustments
 	----------------------------*/
 	
@@ -70,5 +72,22 @@
 		display: none;	
 	}
 	
-
+	/* Subforums in column
+	---------------------------------------- */	
+	ul.sub-list {
+		width: 100%;
+	}	
+	
+	/* responsive logo
+	---------------------------------------- */	
+	
+	/* override the dynamic inline width so that we can relatively resize logo below */
+	#site-description {
+		width: 100% !important;
+	}
+	
+	#site-description img {
+		max-width: 85%;
+	}
+	
 }

@@ -1,5 +1,22 @@
 <div id="sidebar_right"<!-- IF STYLE_SETTINGS_CONFIG_COLLAPSIBLE_PANELS --> class="sidebar_right_collapse"<!-- ENDIF -->>
 
+<!-- IF STYLE_SETTINGS_CONFIG_SEARCH_WIDGET and S_DISPLAY_SEARCH -->
+    <div class="search-box sidebar_widget" role="search">
+        <form method="get" id="forum-search" action="{U_SEARCH}">
+        <fieldset>
+            <input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search sidebar_search" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
+            <button class="button button-search" type="submit" title="{L_SEARCH}">
+                <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
+            </button>
+            <a href="{U_SEARCH}" class="button button-search-end" title="{L_SEARCH_ADV}">
+                <i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH_ADV}</span>
+            </a>
+            {S_SEARCH_LOCAL_HIDDEN_FIELDS}
+        </fieldset>
+        </form>                
+    </div>
+<!-- ENDIF -->
+
 <!-- IF STYLE_SETTINGS_CONFIG_PROFILE_WIDGET -->
 	<div class="sidebar_widget profile_widget fancy_panel">
     	<div class="fancy_panel_padding">
@@ -23,7 +40,7 @@
             <!-- IF S_USER_LOGGED_IN -->
                 <div class="profile_widget_info">
                     
-                        <p>Hello, {CURRENT_USERNAME_SIMPLE}!</p>
+                        <p>Hi, {CURRENT_USERNAME_SIMPLE}!</p>
                         <ul>
                             <li>
                                 <a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}">

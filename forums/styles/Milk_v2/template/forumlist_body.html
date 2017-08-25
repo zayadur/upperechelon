@@ -70,22 +70,7 @@
                             	{L_TOPICS}{L_COLON} <strong>{forumrow.TOPICS}</strong> &nbsp; {L_POSTS}{L_COLON} <strong>{forumrow.POSTS}</strong><!-- ENDIF -->
                             </div>                    
 						<!-- ELSE -->
-                            <!-- IF forumrow.MODERATORS -->
-                                <br /><strong>{forumrow.L_MODERATOR_STR}{L_COLON}</strong> {forumrow.MODERATORS}
-                            <!-- ENDIF -->
-                            <!-- IF .forumrow.subforum and forumrow.S_LIST_SUBFORUMS -->
-                                <!-- EVENT forumlist_body_subforums_before -->
-                                <br /><strong>{forumrow.L_SUBFORUM_STR}{L_COLON}</strong>
-                                <!-- BEGIN subforum -->
-                                    <a href="{forumrow.subforum.U_SUBFORUM}" class="subforum<!-- IF forumrow.subforum.S_UNREAD --> unread<!-- ELSE --> read<!-- ENDIF -->" title="<!-- IF forumrow.subforum.S_UNREAD -->{L_UNREAD_POSTS}<!-- ELSE -->{L_NO_UNREAD_POSTS}<!-- ENDIF -->">
-                                        <i class="icon <!-- IF forumrow.subforum.IS_LINK -->fa-external-link<!-- ELSE -->fa-file-o<!-- ENDIF --> fa-fw <!-- IF forumrow.subforum.S_UNREAD --> icon-red<!-- ELSE --> icon-blue<!-- ENDIF --> icon-md" aria-hidden="true"></i>{forumrow.subforum.SUBFORUM_NAME}
-                                    </a>
-                                    <!-- IF not forumrow.subforum.S_LAST_ROW -->{L_COMMA_SEPARATOR}<!-- ENDIF -->
-                                <!-- END subforum -->
-                                <!-- EVENT forumlist_body_subforums_after -->
-                            <!-- ENDIF -->
-    
-                            <!-- IF not S_IS_BOT -->
+ 								<!-- IF not S_IS_BOT -->
                             <div class="responsive-show responsive_forumlist_row_stats" style="display: none;">
                                 <!-- IF forumrow.CLICKS -->
                                     {L_REDIRECTS}{L_COLON} <strong>{forumrow.CLICKS}</strong>
@@ -93,6 +78,25 @@
                                     {L_TOPICS}{L_COLON} <strong>{forumrow.TOPICS}</strong> &nbsp;&nbsp;&nbsp; {L_POSTS}{L_COLON} <strong>{forumrow.POSTS}</strong>
                                 <!-- ENDIF -->
                             </div>
+                            <!-- ENDIF -->                        
+                            <!-- IF forumrow.MODERATORS -->
+                                <br /><strong>{forumrow.L_MODERATOR_STR}{L_COLON}</strong> {forumrow.MODERATORS}
+                            <!-- ENDIF -->
+                            <!-- IF .forumrow.subforum and forumrow.S_LIST_SUBFORUMS -->
+                                <!-- EVENT forumlist_body_subforums_before -->
+                                <div style="clear: both;"></div>
+                                <br /><strong>{forumrow.L_SUBFORUM_STR}{L_COLON}</strong>
+                                
+                                	<div class="sub-forumlist">
+                                		<!-- BEGIN subforum -->
+                                    	<li>
+                                        <a href="{forumrow.subforum.U_SUBFORUM}" class="subforum<!-- IF forumrow.subforum.S_UNREAD --> unread<!-- ELSE --> read<!-- ENDIF -->" title="<!-- IF forumrow.subforum.S_UNREAD -->{L_UNREAD_POSTS}<!-- ELSE -->{L_NO_UNREAD_POSTS}<!-- ENDIF -->">
+                                        <i class="icon notification_unread <!-- IF forumrow.subforum.IS_LINK -->fa-external-link<!-- ELSEIF forumrow.subforum.S_UNREAD -->fa-circle<!-- ELSE -->fa-circle-o<!-- ENDIF --> fa-fw icon-md" aria-hidden="true"></i> {forumrow.subforum.SUBFORUM_NAME}
+                                    </a>
+                                    </li>
+                                	<!-- END subforum -->
+                                	</div>
+                                <!-- EVENT forumlist_body_subforums_after -->
                             <!-- ENDIF -->
                         <!-- ENDIF --><!-- /if not: Grid -->
 					</div>

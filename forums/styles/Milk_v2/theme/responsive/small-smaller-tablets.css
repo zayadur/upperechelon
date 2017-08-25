@@ -1,5 +1,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
 	
+	body{ border-top-color: #FF3;}
+	
 	/* Global Containers
 	---------------------------------------- */
 
@@ -129,4 +131,22 @@
 	span.topic_type span {
 		display: none;
 	}		
+	
+	/* Subforums in column
+	---------------------------------------- */	
+	ul.sub-list {
+		width: 100%;
+	}
+	
+	/* responsive logo
+	---------------------------------------- */	
+	
+	/* override the dynamic inline width so that we can relatively resize logo below */
+	#site-description {
+		width: 100% !important;
+	}
+	
+	#site-description img {
+		max-width: 85%;
+	}	
 }

@@ -91,7 +91,7 @@ dl.attachbox, .codebox code, blockquote, blockquote blockquote blockquote {
 	background-color: #252F39;
 }
 
-li.row, .forumlist_grid ul.forums dl.row-item {
+li.row, .forumlist_grid .grid_desc {
 	background-color: #252f39;
 	border-color: #252F39;
 }
@@ -161,7 +161,7 @@ html, body, .copyright_bar, .navbar_footer, .content, .signature, .postprofile, 
 	border-color: #323f4e transparent !important;
 }
 
-li.row strong, .postprofile strong, .button .icon, .button-secondary, .inputbox, .message-box textarea, a.button1, input.button1, input.button3, a.button2, input.button2, .inputbox, .button, fieldset dl:hover dt label, .topic_type, .icon.icon-gray, dl.faq dt, dl.details dt, .dropdown-extended .header, .dropdown-extended .footer, fieldset.polls dl.voted {
+li.row strong, .postprofile strong, .button .icon, .button-secondary, .inputbox, .message-box textarea, a.button1, input.button1, input.button3, a.button2, input.button2, .inputbox, .button, fieldset dl:hover dt label, .topic_type, .icon.icon-gray, dl.faq dt, dl.details dt, .dropdown-extended .header, .dropdown-extended .footer, fieldset.polls dl.voted, .dark_base .forumlist_grid .grid_colour_overlay {
 	color: #e1edff;
 }
 

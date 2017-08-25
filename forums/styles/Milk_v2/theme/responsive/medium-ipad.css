@@ -1,4 +1,6 @@
 @media (min-width: 992px)and (max-width: 1199px) {
+	
+	body{ border-top-color: #0F9;}
 		
 	/* Global Containers
 	---------------------------------------- */
@@ -194,5 +196,23 @@
 	.auth-page-admin .login_container_left_section_content {
 		min-height: 0;
 	}
+	
+	/* Subforums in column
+	---------------------------------------- */	
+	ul.sub-list {
+		width: 100%;
+	}	
+	
+	/* responsive logo
+	---------------------------------------- */	
+	
+	/* override the dynamic inline width so that we can relatively resize logo below */
+	#site-description {
+		width: 100% !important;
+	}
+	
+	#site-description img {
+		max-width: 85%;
+	}	
 	
 }

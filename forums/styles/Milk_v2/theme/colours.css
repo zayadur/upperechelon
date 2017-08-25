@@ -399,10 +399,9 @@ dl.faq dt {
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background-color: #F8F8F8;}
-
-.rtl blockquote {
+	background-color: #F8F8F8;
 }
+
 
 blockquote blockquote {
 	/* Nested quotes */
@@ -429,13 +428,6 @@ blockquote blockquote blockquote {
 	background-color: #F8F8F8;
 	border-left: 5px solid;	
 }
-
-.syntaxbg		{ color: #FFFFFF; }
-.syntaxcomment	{ color: #FF8000; }
-.syntaxdefault	{ color: #0000BB; }
-.syntaxhtml		{ color: #000000; }
-.syntaxkeyword	{ color: #007700; }
-.syntaxstring	{ color: #DD0000; }
 
 /* Attachments
 ----------------------------------------*/
@@ -1094,8 +1086,18 @@ body.content_block_header_stripe li.header {
 
 /* Grid Forumlist
 ---------------------------------------- */
-.forumlist_grid ul.forums dl.row-item {
-	background-color: #FFF	
+.grid_desc {
+	background: #FFFFFF;
+}
+
+.forumlist_grid .grid_colour_overlay {
+	color: #FFFFFF;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.55+100 */
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.55) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#8c000000',GradientType=0 ); /* IE6-9 */
+	text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 .forumlist_grid ul.forums li.row {
@@ -1176,12 +1178,12 @@ a.no_avatar, a.no_avatar:hover {
 
 /* Misc
 ---------------------------------------- */
-.topic_type {
+.topic_type, .grid_unread {
 	color: #FFFFFF;
 }
 
 .topic_type a {
-	color: #FFFFFF;
+	color: #FFFFFF !important;
 }
 
 .sidebar_content, .profile_widget_list, .login_form_forgot_link, .forumlist_grid_block_stats {

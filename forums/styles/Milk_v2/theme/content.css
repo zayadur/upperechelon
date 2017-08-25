@@ -106,7 +106,6 @@ li.row {
 	margin-bottom: 5px !important;
 }
 
-
 li.header dt, li.header dd {
 	line-height: 1em;
 	border-left-width: 0;
@@ -672,10 +671,10 @@ fieldset.polls dd div {
 	overflow: hidden;
 }
 
-.postprofile .avatar {
+.postprofile a .avatar {
 	display: block;
 	max-width: 100%;
-	text-align: center;
+	text-align: center; /* gravatar fix */
 	margin: 0 auto;
 }
 

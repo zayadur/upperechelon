@@ -6,7 +6,20 @@
 
 <!-- IF STYLE_SETTINGS_CONFIG_COLLAPSIBLE_PANELS --><div id="forumlist_collapse"><!-- ENDIF -->
 
-<!-- INCLUDE forumlist_body.html -->
+<!-- IF STYLE_SETTINGS_CONFIG_FORUMLIST_DISPLAY == 'Grid' -->
+ 	<!-- INCLUDE forumlist_grid.html -->
+<!-- ELSE -->
+	<!-- INCLUDE forumlist_body.html -->
+<!-- ENDIF -->
+
+<div class="post_forumlist_links">
+	<!-- IF S_USER_LOGGED_IN -->
+    	<span class="current_time">{CURRENT_TIME}</span>
+    <!-- ENDIF -->
+    <!-- IF U_MARK_FORUMS -->
+        <br /><a href="{U_MARK_FORUMS}" class="mark-read" accesskey="m" data-ajax="mark_forums_read">{L_MARK_FORUMS_READ}</a>
+    <!-- ENDIF -->
+</div>
 
 <!-- EVENT index_body_forumlist_body_after -->
 
@@ -57,7 +70,10 @@
                     <!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
                     <p>
                         <!-- EVENT index_body_block_online_prepend -->
-                        {TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+                        {TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> 
+                        <!-- IF U_VIEWONLINE -->
+                        	<br />{LOGGED_IN_USER_LIST}
+                        <!-- ENDIF -->
                         <!-- IF LEGEND --><br /><strong>{L_LEGEND}{L_COLON} {LEGEND}</strong><!-- ENDIF -->
                         <!-- EVENT index_body_block_online_append -->
                     </p>
@@ -75,7 +91,8 @@
                         </p>
                     </div>
                 </li>
-            <!-- ENDIF -->             
+            <!-- ENDIF -->
+            <!-- EVENT index_body_birthday_block_before -->  
             <!-- IF S_DISPLAY_BIRTHDAY_LIST and S_BIRTHDAYS -->
             <li class="row">
                 <div class="stat-block birthday-list">

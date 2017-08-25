@@ -149,7 +149,7 @@ a:hover	{ text-decoration: underline; }
 /* Site description and logo */
 .site-description {
 	text-align: center;
-	margin: 50px auto 100px;
+	/* margin: 50px auto 100px; */
 	position: relative;
 	z-index: 2;
 	display: inline-block;
@@ -157,17 +157,24 @@ a:hover	{ text-decoration: underline; }
 
 .site-description.logo_left {
 	text-align: left;
-	margin: 100px 50px;
+	/* margin: 100px 50px; */
 	float: left;
 }
 
 .site-description.logo_right {
 	text-align: right;
-	margin: 100px 50px;
+	/* margin: 100px 50px; */
 	float: right;
 }
 
+body.navbar_i_header .site-description {margin: 50px auto 100px;}
+body.navbar_i_header .site-description.logo_left {margin: 100px 50px 100px;}
+body.navbar_i_header .site-description.logo_right {margin: 100px 50px 100px;}
 
+body.navbar_o_header .site-description {margin: 50px auto 100px;}
+body.navbar_o_header .site-description.logo_left {margin: 50px 50px 100px;}
+body.navbar_o_header .site-description.logo_right {margin: 50px 50px 100px;}
+	
 .site-description h1 {
 	margin-right: 0;
 	margin-top: 30px;
@@ -835,7 +842,6 @@ fieldset.fields1 dl.pmlist dd.recipients {
 }
 
 .pagination li a, .pagination li span {
-	border-radius: 2px;
 	padding: 2px 5px;
 }
 
@@ -868,7 +874,7 @@ fieldset.fields1 dl.pmlist dd.recipients {
 /* Pagination in viewforum for multipage topics */
 .row .pagination {
 	display: block;
-	margin-top: 0em;
+	margin-top: -12px;
 }
 
 .row .pagination > ul {
@@ -876,14 +882,7 @@ fieldset.fields1 dl.pmlist dd.recipients {
 }
 
 .row .pagination li a, .row .pagination li span {
-	border-radius: 2px;
     padding: 1px 5px;
-}
-
-.topic-poster {
-	float: left;
-	padding-right: 0.5em;
-	margin-top: 0.3em;
 }
 
 /* jQuery popups
@@ -1201,7 +1200,7 @@ ul.linklist:after,
 	margin: 0 30px 0 0;
 }
 
-.linklist.compact .rightside > a > span span {
+.linklist.compact .rightside > a > span {
 	display: none;
 }
 

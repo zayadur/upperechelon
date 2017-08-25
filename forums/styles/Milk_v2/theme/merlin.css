@@ -1,5 +1,9 @@
 /* New code for new things */
 
+
+/* Ignore this. Used for testing only */
+body {border-top: 0px solid;}
+
 /* Boxed and Fluid Layout Switches
 ---------------------------------------- */
 .body-layout-Fluid .wrap {}
@@ -189,7 +193,11 @@ body.content_block_header_stripe li.header:before, .fancy_panel:before, .sidebar
 /* For easy margins on grid items, we apply them to all sides. Here we need to pull the container
 margins out so that the grid items 'appear' to be flush with the container and center column */
 .forumlist_grid ul.forums {
-	margin: 15px -7.5px 0;
+	margin: 10px 0 0;
+}
+
+.forumlist_grid li.row {
+	margin-bottom: 0px !important;
 }
 
 /* Sets the 3 column structure */
@@ -201,32 +209,37 @@ margins out so that the grid items 'appear' to be flush with the container and c
 	padding: 0;
 }
 
-/* Margins and Height defined to maintain uniformity */
-.forumlist_grid ul.forums dl.row-item {
-	height: 80px;
-	overflow: hidden;
-	margin: 0 7.5px 15px 7.5px;
-	padding: 15px 15px 15px 50px;
+.forumlist_grid .grid_image_container {
+	margin: 0 15px 30px 15px;	
 }
 
 /* Do the same for forum images */
 .forumlist_grid .forumlist_grid_forum_image {
+	background-size: cover;
+}
+
+.forumlist_grid .grid_colour_overlay {
 	display: block;
 	height: 200px;
-	margin: 0 7.5px 0 7.5px;
-	background-size: cover;
+	position: relative;
+}
+
+.forumlist_grid .forumlist_grid_title {
+	position: absolute;
+	bottom: 42px;
+	padding: 0 15px;
+}
+
+.forumlist_grid .forumlist_grid_numbers  {
+	position: absolute;
+	bottom: 0;
+	padding: 15px;
 }
 
 /* Since this is the only column, we don't need to push the others over to the right */
 .forumlist_grid ul.topiclist dt .list-inner {
 	padding: 0;
 	margin: 0;
-}
-
-.forumlist_grid_block_stats {
-	border-top: 1px solid;
-	margin-top: 7px;
-	padding-top: 5px;
 }
 
 .forumlist_grid li.row:hover {
@@ -236,6 +249,16 @@ margins out so that the grid items 'appear' to be flush with the container and c
 .forumlist_grid .forum_description {
 	display: block;
 	height: 35px;
+	overflow: hidden;
+}
+
+.forumlist_grid_numbers {
+	bottom: 0;
+}
+
+.grid_desc {
+	padding: 20px;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 	overflow: hidden;
 }
 
@@ -249,7 +272,7 @@ margins out so that the grid items 'appear' to be flush with the container and c
 ---------------------------------------- */
 dd.simpleposts {
 	text-align: center;
-	line-height: 2.2em;
+	line-height: 2em;
 	width: 190px;
 }
 
@@ -439,10 +462,10 @@ a.no_avatar i.icon {
 ---------------------------------------- */
 .topic_type {
 	display: inline-block;
-	padding: 3px;
+	padding: 2px 2px 2px 4px;
 	font-weight: 500;
-	border-radius: 3px;
-	float: right;
+	float: left;
+	margin-right: 3px;
 }
 
 .topic_type span {
@@ -452,6 +475,13 @@ a.no_avatar i.icon {
 
 .topic_type span::first-letter {
 	text-transform: uppercase;
+}
+
+.grid_unread {
+	display: inline-block;
+	padding: 2px 4px;
+	float: left;
+	margin-right: 10px;
 }
 
 

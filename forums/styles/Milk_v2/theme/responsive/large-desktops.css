@@ -1,5 +1,7 @@
 @media (min-width: 1200px) {
 	
+	body{ border-top-color: #F3F;}
+	
 	/* Fix the body layout for large desktop devices */
 	.body-layout-Boxed .wrap {width: 1200px;}
 	
@@ -139,5 +141,16 @@
 	.auth-page-admin .login_container_left_section_content {
 		min-height: 0;
 	}
+	/* responsive logo
+	---------------------------------------- */	
+	
+	/* override the dynamic inline width so that we can relatively resize logo below */
+	#site-description {
+		width: 100% !important;
+	}
+	
+	#site-description img {
+		max-width: 90%;
+	}	
 
 }
