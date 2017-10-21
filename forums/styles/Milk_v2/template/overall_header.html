@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}">
 <head>
 <meta charset="utf-8" />
@@ -204,10 +204,10 @@ class="site_logo"></span></a>
                 <!-- EVENT overall_header_breadcrumbs_before -->
                 <li class="breadcrumbs">
                     <!-- IF U_SITE_HOME -->
-                        <span class="crumb" {$MICRODATA}><a href="{U_SITE_HOME}" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">{L_SITE_HOME}</span></a></span>
+                        <span class="crumb" {$MICRODATA}>Browsing: <a href="{U_SITE_HOME}" itemprop="url" data-navbar-reference="home"><span itemprop="title">{L_SITE_HOME}</span></a></span>
                     <!-- ENDIF -->
                     <!-- EVENT overall_header_breadcrumb_prepend -->
-                        <span class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemprop="url" accesskey="h" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw"></i><!-- ENDIF --><span itemprop="title">{L_INDEX}</span></a></span>
+                        <span class="crumb" {$MICRODATA}>Browsing: <a href="{U_INDEX}" itemprop="url" accesskey="h" data-navbar-reference="index"><span itemprop="title">{L_INDEX}</span></a></span>
         
                     <!-- BEGIN navlinks -->
                         <!-- EVENT overall_header_navlink_prepend -->
@@ -219,8 +219,8 @@ class="site_logo"></span></a>
                 <!-- EVENT overall_header_breadcrumbs_after -->
         
                 <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-                    <li class="rightside responsive-search">
-                        <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}" role="menuitem">
+                    <li class="rightside">
+                        <a href="{U_SEARCH}" title="Advanced search options" role="menuitem">
                             <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
                         </a>
                     </li>

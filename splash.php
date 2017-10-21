@@ -40,9 +40,13 @@
                     <div class="inner splash">
 
                         <img class="logo" src="https://s3.amazonaws.com/upperechelon.gg/img/logo-transparent.png" height="238" width="162" alt="Upper Echelon">
+						
+						<!-- 
                         <div class="counter">
                             <div id="countdown"></div>
                         </div> <!-- /.Counter Div -->
+						<br />
+						<p>The Upper Echelon website is currently under maintenance</p>
 
                     </div>
 
