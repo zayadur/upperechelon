@@ -20,7 +20,7 @@
         <meta name="msapplication-config" content="https://s3.amazonaws.com/upperechelon.gg/img/icons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-        <title>Upper Echelon</title>
+        <title>Upper Echelon Gamers</title>
 
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -41,12 +41,13 @@
 
                         <img class="logo" src="https://s3.amazonaws.com/upperechelon.gg/img/logo-transparent.png" height="238" width="162" alt="Upper Echelon">
 						
-						<!-- 
+                        <div class="phrase">
+                            <div id="phrase"></div>
+                        </div>
                         <div class="counter">
                             <div id="countdown"></div>
-                        </div> <!-- /.Counter Div -->
+                        </div>
 						<br />
-						<p>The Upper Echelon website is currently under maintenance</p>
 
                     </div>
 
@@ -75,6 +76,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/dc478df934.js"></script>
-    <script src="https://s3.amazonaws.com/upperechelon.gg/js/countdown.js"></script>
+    <script src="https://s3.amazonaws.com/upperechelon.gg/js/splash.js"></script>
   </body>
 </html>
