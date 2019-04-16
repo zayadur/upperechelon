@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='icon', href='/images/icons/favicon.ico')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.2/css/all.css')
+    link(rel='stylesheet', href='/stylesheets/global.css')
+  body
+    
+    nav.navbar.navbar-expand-lg.sticky-top.navbar-black
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#mainmenu' aria-controls='mainmenu' aria-expanded='false' aria-label='Toggle Menu')
+        i.fas.fa-sort-amount-down
+      #mainmenu.collapse.navbar-collapse
+        a.navbar-brand(href='/')
+          img.d-inline-block.align-top(src='/images/logo-transparent.png' height="33" width="24" alt='Upper Echelon Gamers')
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/about' title='Learn more about the organization') About
+          li.nav-item
+            a.nav-link(href='/teams' title='Meet the family') Teams
+          li.nav-item
+            a.nav-link(href='/partners' title='Meet the extended family') Partners
+          li.nav-item
+            a.nav-link(href='https://agentinq.com/collections/upper-echelon-gamers' target='_blank' title='Agent Inq Merchandise') Shop
+        ul.navbar-nav.justify-right
+          li.nav-item
+            a.nav-link(href='http://discord.upperechelon.gg' target='_blank' title="Discord")
+              i.fab.fa-discord
+          li.nav-item
+            a.nav-link(href='https://www.twitch.tv/team/upperechelon' target='_blank' title='Twitch')
+              i.fab.fa-twitch
+          li.nav-item
+            a.nav-link(href='https://www.twitter.com/ue_upperechelon' target='_blank' title='Twitter')
+              i.fab.fa-twitter
+          li.nav-item
+            a.nav-link(href='https://youtube.com/c/upperechelongamersueg' target='_blank' title='YouTube')
+              i.fab.fa-youtube
+
+    block content
+    
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+    
