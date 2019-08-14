@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  div(style='position: absolute; z-index: -99; width: 100%; height: 100%')
-    iframe(frameborder='0' height='100%' width='100%' src='https://www.youtube.com/embed/?listType=playlist&list=UUhI0q9a-ZcbZh7dAu_-J-hg' allowfullscreen)
+  .home
+    
+    div(style="text-align: center;").footer.container-fluid
+      a.btn.btn-info.btn-lg(href="https://www.twitter.com/ue_upperechelon")
+          i.fab.fa-twitter
+      | &nbsp;
+      a.btn.btn-danger.btn-lg(href="https://www.youtube.com/watch?v=cmI2L3eQyCY&list=UUhI0q9a-ZcbZh7dAu_-J-hg")
+        i.fab.fa-youtube
