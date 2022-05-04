@@ -1,7 +1,0 @@
-        <!-- IF S_DISPLAY_PM -->
-			<li class="rightside" data-skip-responsive="true">
-				<a href="{U_PRIVATEMSGS}" role="menuitem">
-					<i class="icon fa-inbox fa-fw" aria-hidden="true"></i><span>&nbsp;<!-- IF PRIVATE_MESSAGE_COUNT --><strong class="badge">{PRIVATE_MESSAGE_COUNT}</strong><!-- ELSE --><strong>0</strong><!-- ENDIF --></span>
-				</a>
-			</li>
-		<!-- ENDIF -->

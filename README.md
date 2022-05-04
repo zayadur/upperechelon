@@ -1,7 +1,12 @@
-# Upper Echelon Gamers
+# Deployment
+Throw the following files and folders on the server and you're ready to go.
+- `index.html`
+- `favicon.ico`
+- `/assets`
 
-Upper Echelon LLC is a multifaceted gaming organization with a vast network of gamers aiming to create a social experience that adds value to the lives of like minded individuals.
-
-Founded by Chris "Sanctionite" Zakrzewski on May 23, 2016, the organization rapidly grew in size, reaching a user-base of thousands of members. To this day, it continues to expand.
-
-Upper Echelon Gamers can be found all over the Internet, ranging from social media groups, game-based clans and teams, to entertainment platforms such as Twitch and YouTube.
+# Setting up for development
+Just install the dependencies via `npm install`, the sources are in the `src` folder, it's using SCSS for the stylesheets and ES6 for javascript.
+The compilation commands are these:
+1. `npm run dev` - one time compilation of assets without minifying anything
+2. `npm run prod` - one time compilation ready for production
+3. `npm run watch` - continuous compilation of assets on change

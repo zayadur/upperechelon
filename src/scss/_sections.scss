@@ -1,0 +1,68 @@
+#support{
+  background: #000 url("../img/section-bg.png") no-repeat top center;
+  text-align: center;
+  padding: 110px 0;
+  max-height: 585px;
+
+  .action{
+    a{
+      margin-right: 5px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    padding: 60px 0;
+    background-size: cover;
+  }
+}
+
+.merch-selector{
+  display: flex;
+  flex-flow: row nowrap;
+
+  @include media-breakpoint-down(md){
+    flex-flow: column nowrap;
+  }
+
+  > .selector{
+    flex: 1 0 auto;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 450px;
+    margin: 0 15px;
+    border-radius: 4px;
+    box-shadow: 0 9px 25px rgba(#000, 0.5);
+    transition: 250ms ease-in-out;
+
+    @include media-breakpoint-down(md){
+      height: 315px;
+    }
+
+    @include media-breakpoint-down(md){
+      height: 350px;
+      margin-bottom: 20px;
+    }
+
+    &.teespring{
+      background-image: url("../img/teespring.png");
+
+      &:hover{
+        background-image: url("../img/teespring-active.png");
+      }
+    }
+
+    &.agentink{
+      background-image: url("../img/agentink.png");
+
+      &:hover{
+        background-image: url("../img/agentink-active.png");
+      }
+    }
+  }
+}
